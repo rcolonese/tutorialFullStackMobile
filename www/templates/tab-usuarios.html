@@ -1,0 +1,17 @@
+<ion-view view-title="">
+    <ion-nav-buttons side="primary" hide-back-button="true">
+       <div class="h1 title">Usuários</div>
+       <button class="button button-right button-clear button-positive" ng-click="sair()">Sair</button>
+    </ion-nav-buttons>
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="usuario in usuarios" type="item-text-wrap" href="#/conversas/{{usuario.id}}">
+        <!--<img ng-src="{{chat.face}}">-->
+        <h2>{{usuario.nome}}  - {{usuario.qtd_mensagens}}</h2>
+        <p>usuário: {{usuario.id}}, {{usuario.email}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

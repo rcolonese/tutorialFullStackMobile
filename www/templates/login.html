@@ -1,0 +1,24 @@
+<ion-view view-title="" hide-back-button="true">
+    <ion-nav-buttons side="primary">
+        <h1 class="title">Login</h1>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="email" ng-model="email">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="senha" ng-model="senha">
+            </label>
+        </div>
+
+        <button class="button button-block button-positive" ng-click="acessar(email, senha)">
+            acessar
+        </button>
+
+        <button class="button button-clear button-positive" ng-click="cadastrar()">
+            quero me cadastrar
+        </button>
+    </ion-content>
+</ion-view>

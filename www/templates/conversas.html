@@ -1,0 +1,30 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="" hide-back-button="true">
+    <ion-nav-buttons side="primary">
+        <button class="button button-clear icon ion-ios-arrow-back" ng-click="voltar()"></button>
+        <h1 class="title">Mensagens </h1>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar" ng-class="{'item-icon-left' : exibir_como_minha_mensagem(mensagem)==false, 'item-icon-right' : exibir_como_minha_mensagem(mensagem)==true}" ng-repeat="mensagem in mensagens" type="item-text-wrap">
+                <!--<img ng-src="{{chat.face}}">-->
+                <i class="icon icon-right ion-chatbox"></i>
+                <h2>{{mensagem.nome_rem}}</h2>
+                <p>{{mensagem.msg}}</p>
+            </ion-item>
+        </ion-list>
+
+    </ion-content>
+    <ion-footer-bar align-title="left" class="bar-assertive">
+        
+            <!--<button class="title  button button-clear icon ion-chatbox item-icon-left" ng-click="escrever_mensagem()">   escrever mensagem</button>-->
+            <h1 class="title button button-clear icon ion-chatbox item-icon-left" ng-click="escrever_mensagem()"> escrever mensagem</h1>
+        
+    </ion-footer-bar>
+</ion-view>
+

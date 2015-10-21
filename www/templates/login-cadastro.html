@@ -1,0 +1,30 @@
+<ion-view view-title="" hide-back-button="true">
+    <ion-nav-buttons side="primary">
+        <button class="button button-clear icon ion-ios-arrow-back" ng-click="voltar()"></button>
+        <h1 class="title">Cadastro de usuário</h1>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="nome" ng-model="usuario.nome">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="email" ng-model="usuario.email">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="senha" ng-model="usuario.senha">
+            </label>
+        </div>
+
+        <button class="button button-block button-positive" ng-click="cadastrar(usuario)">
+            cadastrar
+        </button>
+
+        <div class="card" ng-show="msg_erro">
+            <div class="item item-text-wrap assertive" >
+                {{msg_erro}}
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>
